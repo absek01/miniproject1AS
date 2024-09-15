@@ -20,7 +20,7 @@ import os
 # List of stock tickers to fetch data for
 tickers = ['AAPL', 'MSFT', 'GOOGL', 'AMZN', 'TSLA']
 
-# Number of trading days to retrieve data for
+# Number of trading days to retrieve data for 5 days (Tried doing 10 but the system did not allow)
 num_days = 5
 
 
