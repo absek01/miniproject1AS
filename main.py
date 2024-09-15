@@ -38,3 +38,17 @@ def plot_stock_data(data):
         plt.legend()
         plt.savefig(f'charts/{ticker}_closing_prices.png')
         plt.close()
+
+    # Main function to execute the script
+
+
+def main():
+    data = fetch_stock_data(tickers, num_days)
+    plot_stock_data(data)
+    print("Stock data has been plotted and saved.")
+
+
+if __name__ == "__main__":
+    main()
+
+
