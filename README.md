@@ -14,3 +14,6 @@ Please run the following:
 ```
 pip install -r requirements.txt
 ```
+## Execution of program
+
+```python main.py```
