@@ -23,3 +23,18 @@ def fetch_stock_data(tickers, num_days):
         data[ticker] = np.array(hist['Close'])  # Convert to NumPy array
     return data
 
+# Creating and saving plots
+def plot_stock_data(data):
+    if not os.path.exists('charts'):
+        os.makedirs('charts')
+
+    for ticker, prices in data.items():
+        plt.figure(figsize=(10, 6))
+        plt.plot(prices, marker='o', label=ticker)
+        plt.title(f'Closing Prices for {ticker}')
+        plt.xlabel('Days')
+        plt.ylabel('Closing Price (USD)')
+        plt.grid(True)
+        plt.legend()
+        plt.savefig(f'charts/{ticker}_closing_prices.png')
+        plt.close()
